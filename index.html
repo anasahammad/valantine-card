@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Valantine Card's</title>
+
+    <script src="https://cdn.tailwindcss.com"> </script>
+
+    <style>
+        body{
+            background-color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+       
+       
+      
+
+    </style>
+
+</head>
+<body>
+
+    <div class="valantine-card mx-auto bg-white rounded-[20px] w-[300px] h-[400px] lg:w-[500px] lg:h-[500px]  text-center  pt-[50px] mt-14 ">
+        <h1 class="text-[20px] lg:text-[30px]"> Will you be my Valantine?</h1>
+
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="" class="m-auto">
+
+        <h2 class=" text-[18px] lg:text-[22px]">Please Select Yes or No</h2>
+        
+
+        <a href="yes.html"><button id="yes" class="h-[30px] lg:h-[40px] w-[60px] bg-green-500 border-solid border-2 border-white rounded-[10px] text-white ml-[-50px]" > Yes! </button></a>
+        <button onmouseover="valantine()" id="no" class=" absolute h-[30px] lg:h-[40px] w-[60px] bg-red-600 border-solid border-2 border-white rounded-[10px] text-white ml-[10px]"> No! </button>
+        
+    </div>
+
+    <script>
+        function valantine(){
+            
+            const btnNo = document.getElementById("no")
+
+            let widthWindow = window.innerWidth;
+            let heightJanela = window.innerHeight;
+
+            let maxX = widthWindow - btnNo.offsetWidth;
+            let maxY = heightJanela - btnNo.offsetHeight;
+
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+
+            btnNo.style.left = randomX + "px";
+            btnNo.style.top = randomY + "px";
+
+        }
+
+       
+    </script>
+
+
+
+    
+</body>
+</html>
